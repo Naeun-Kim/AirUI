@@ -1,0 +1,17 @@
+@mixin fontProps($size, $spacing, $line: #{$size * 1.5}) {
+  font-size: #{$size}px;
+  letter-spacing: #{$spacing}px;
+  line-height: #{$line}px;
+}
+
+@mixin flagColor($color, $bgLightness, $fontLightness) {
+  background-color: hsl(var(--color-#{$color}-#{$bgLightness}));
+  color: hsl(var(--color-#{$color}-#{$fontLightness}));
+}
+
+@mixin lineClamp($line) {
+  display: -webkit-box;
+  -webkit-line-clamp: $line;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
